@@ -49,8 +49,10 @@ def GetKnowledgeBase(rdf_client_obj, allow_uninitialized=False):
   kb = rdf_client_obj.knowledge_base
   try:
     kb.os_major_version = int(version[0])
+    kb.os_version = str(version[0])
     if len(version) > 1:
       kb.os_minor_version = int(version[1])
+      kb.os_version = "%s.%s" % (version[0], version[1])
   except ValueError:
     pass
 

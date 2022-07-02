@@ -247,6 +247,10 @@ message KnowledgeBase {
     description: "Linux distribution name.",
   }];
 
+  optional string os_version = 10 [(sem_type) = {
+    description: "Semantic version definition of OS major and minor version.",
+  }];
+
   //
   // Windows specific system level parameters.
   //
